@@ -1,3 +1,6 @@
-<div class="dashboard-container" style="width: 100%;height: 100%;"></div>
+<dx-dashboard-control style="width: 100%; height:100%; display: block;"
+                      endpoint="api/dashboard"
+                      (onBeforeRender)="onBeforeRender($event)">
+</dx-dashboard-control>
 
 <input-popup description="Dashboard Name:"></input-popup>

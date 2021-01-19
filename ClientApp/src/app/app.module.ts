@@ -13,6 +13,8 @@ import { DevExtremeModule } from 'devextreme-angular';
 
 import { DeleteDashboardService } from './delete-dashboard.service';
 
+import { DxDashboardControlModule } from 'devexpress-dashboard-angular';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +27,7 @@ import { DeleteDashboardService } from './delete-dashboard.service';
     HttpClientModule,
     FormsModule,
     DevExtremeModule,
+    DxDashboardControlModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' }
     ])
