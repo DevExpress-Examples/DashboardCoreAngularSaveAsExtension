@@ -7,7 +7,7 @@
 - [delete-dashboard.service.ts](ClientApp/src/app/delete-dashboard.service.ts)
 - [home.component.ts](ClientApp/src/app/home/home.component.ts)
 
-# HTML JavaScript Dashboard - How to implement Save As and Delete functionality by creating custom extensions
+# Dashoboard for Angular - How to implement Save As and Delete functionality by creating custom extensions
 
 This example demonstrates how to add the "Save As" and "Delete" [menu items](https://docs.devexpress.com/Dashboard/117444) to the Web Dashboard's UI by implementing the corresponding [custom extensions](https://docs.devexpress.com/Dashboard/117543):
 
