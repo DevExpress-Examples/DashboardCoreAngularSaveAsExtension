@@ -14,7 +14,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.0.0" />
-    <PackageReference Include="DevExpress.AspNetCore.Dashboard" Version="20.2.5" />
+    <PackageReference Include="DevExpress.AspNetCore.Dashboard" Version="21.2.2" />
   </ItemGroup>
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->

@@ -29,11 +29,11 @@
     "popper.js": "^1.14.3",
     "rxjs": "^6.4.0",
     "zone.js": "~0.9.1",
-    "devextreme": "^20.2.4",
-    "devextreme-angular": "^20.2.4",
-    "@devexpress/analytics-core": "^20.2.4",
-    "devexpress-dashboard": "^20.2.4",
-    "devexpress-dashboard-angular": "^20.2.4",
+    "devextreme": "21.2-next",
+    "devextreme-angular": "21.2-next",
+    "@devexpress/analytics-core": "21.2-next",
+    "devexpress-dashboard": "21.2-next",
+    "devexpress-dashboard-angular": "21.2-next",
     "jquery-ui-dist": "^1.12.1"
   },
   "devDependencies": {

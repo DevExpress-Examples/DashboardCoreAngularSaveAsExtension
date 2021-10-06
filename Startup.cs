@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace ASPNETCoreDashboardAngular2 {
     public class Startup {
@@ -22,24 +23,28 @@ namespace ASPNETCoreDashboardAngular2 {
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
-            services
-                .AddControllersWithViews()
-                .AddDefaultDashboardController(configurator => {
-                    configurator.SetDashboardStorage(new CustomDashboardFileStorage(FileProvider.GetFileInfo("Data/Dashboards").PhysicalPath));
+            services.AddControllersWithViews();
 
-                    DataSourceInMemoryStorage dataSourceStorage = new DataSourceInMemoryStorage();
-          
-                    DashboardObjectDataSource objDataSource = new DashboardObjectDataSource("Object Data Source");
-                    dataSourceStorage.RegisterDataSource("objectDataSource", objDataSource.SaveToXml());
+            services.AddScoped<DashboardConfigurator>((IServiceProvider serviceProvider) => {
+                DashboardConfigurator configurator = new DashboardConfigurator();
 
-                    configurator.SetDataSourceStorage(dataSourceStorage);
+                configurator.SetDashboardStorage(new CustomDashboardFileStorage(FileProvider.GetFileInfo("Data/Dashboards").PhysicalPath));
 
-                    configurator.DataLoading += (s, e) => {
-                        if (e.DataSourceName == "Object Data Source") {
-                            e.Data = SalesPersonData.GetSalesData();
-                        }
-                    };
-                });
+                DataSourceInMemoryStorage dataSourceStorage = new DataSourceInMemoryStorage();
+
+                DashboardObjectDataSource objDataSource = new DashboardObjectDataSource("Object Data Source");
+                dataSourceStorage.RegisterDataSource("objectDataSource", objDataSource.SaveToXml());
+
+                configurator.SetDataSourceStorage(dataSourceStorage);
+
+                configurator.DataLoading += (s, e) => {
+                    if (e.DataSourceName == "Object Data Source") {
+                        e.Data = SalesPersonData.GetSalesData();
+                    }
+                };
+
+                return configurator;
+            });
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration => {
@@ -67,7 +72,7 @@ namespace ASPNETCoreDashboardAngular2 {
             app.UseRouting();
 
             app.UseEndpoints(endpoints => {
-                EndpointRouteBuilderExtension.MapDashboardRoute(endpoints, "api/dashboard");
+                EndpointRouteBuilderExtension.MapDashboardRoute(endpoints, "api/dashboard", "DefaultDashboard");
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
