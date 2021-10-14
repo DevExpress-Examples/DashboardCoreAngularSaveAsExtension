@@ -3,14 +3,6 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T890260)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-*Files to look at*:
-- [Startup.cs](Startup.cs)
-- [CustomDashboardFileStorage.cs](CustomDashboardFileStorage.cs)
-- [UserDashboardController.cs](Controllers/UserDashboardController.cs)
-- [extensions](ClientApp/src/app/home/extensions)
-- [input-popup.component.html](ClientApp/src/app/home/input-popup.component.html)
-- [delete-dashboard.service.ts](ClientApp/src/app/delete-dashboard.service.ts)
-- [home.component.ts](ClientApp/src/app/home/home.component.ts)
 
 # Dashoboard for Angular - How to implement Save As and Delete functionality by creating custom extensions
 
@@ -22,6 +14,17 @@ This example demonstrates how to add the "Save As" and "Delete" [menu items](htt
 The image below shows the result of the extensions implementation.
 
 ![](readme.png)
+
+<!-- default file list -->
+## Files to look at
+- [Startup.cs](Startup.cs)
+- [CustomDashboardFileStorage.cs](CustomDashboardFileStorage.cs)
+- [UserDashboardController.cs](Controllers/UserDashboardController.cs)
+- [extensions](ClientApp/src/app/home/extensions)
+- [input-popup.component.html](ClientApp/src/app/home/input-popup.component.html)
+- [delete-dashboard.service.ts](ClientApp/src/app/delete-dashboard.service.ts)
+- [home.component.ts](ClientApp/src/app/home/home.component.ts)
+<!-- default file list end -->
 
 ## Documentation
 
