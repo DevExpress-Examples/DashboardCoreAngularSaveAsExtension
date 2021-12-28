@@ -38,7 +38,7 @@ namespace ASPNETCoreDashboardAngular2 {
                 configurator.SetDataSourceStorage(dataSourceStorage);
 
                 configurator.DataLoading += (s, e) => {
-                    if (e.DataSourceName == "Object Data Source") {
+                    if (e.DataId == "odsSales") {
                         e.Data = SalesPersonData.GetSalesData();
                     }
                 };
