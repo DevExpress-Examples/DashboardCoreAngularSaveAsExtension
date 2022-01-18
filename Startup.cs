@@ -23,7 +23,15 @@ namespace ASPNETCoreDashboardAngular2 {
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
-            services.AddControllersWithViews();
+            services
+                .AddCors(options => {
+                    options.AddPolicy("CorsPolicy", builder => {
+                        builder.AllowAnyOrigin();
+                        builder.AllowAnyMethod();
+                        builder.WithHeaders("Content-Type");
+                    });
+                })
+                .AddControllersWithViews();
 
             services.AddScoped<DashboardConfigurator>((IServiceProvider serviceProvider) => {
                 DashboardConfigurator configurator = new DashboardConfigurator();
@@ -70,6 +78,7 @@ namespace ASPNETCoreDashboardAngular2 {
             app.UseDevExpressControls();
 
             app.UseRouting();
+            app.UseCors("CorsPolicy");
 
             app.UseEndpoints(endpoints => {
                 EndpointRouteBuilderExtension.MapDashboardRoute(endpoints, "api/dashboard", "DefaultDashboard");
