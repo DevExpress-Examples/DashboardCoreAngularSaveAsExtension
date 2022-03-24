@@ -92,6 +92,7 @@ namespace ASPNETCoreDashboardAngular2 {
                 // see https://go.microsoft.com/fwlink/?linkid=864501
 
                 spa.Options.SourcePath = "ClientApp";
+                spa.Options.StartupTimeout = new System.TimeSpan(0, 0, 10, 0, 0);
 
                 if (env.IsDevelopment()) {
                     spa.UseAngularCliServer(npmScript: "start");
