@@ -15,8 +15,8 @@ The image below shows the result of the extensions implementation.
 
 ![](readme.png)
 
-<!-- default file list -->
-## Files to look at
+## Files to Review
+
 - [Startup.cs](Startup.cs)
 - [CustomDashboardFileStorage.cs](CustomDashboardFileStorage.cs)
 - [UserDashboardController.cs](Controllers/UserDashboardController.cs)
@@ -24,7 +24,6 @@ The image below shows the result of the extensions implementation.
 - [input-popup.component.html](ClientApp/src/app/home/input-popup.component.html)
 - [delete-dashboard.service.ts](ClientApp/src/app/delete-dashboard.service.ts)
 - [home.component.ts](ClientApp/src/app/home/home.component.ts)
-<!-- default file list end -->
 
 ## Documentation
 
