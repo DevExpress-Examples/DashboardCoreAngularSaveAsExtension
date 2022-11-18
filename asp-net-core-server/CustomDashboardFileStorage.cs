@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using DevExpress.DashboardWeb;
 
-namespace ASPNETCoreDashboardAngular2 {
+namespace ASPNETCoreDashboardAngular {
     public class CustomDashboardFileStorage : DashboardFileStorage {
         public CustomDashboardFileStorage(string workingDirectory)
             : base(workingDirectory) {

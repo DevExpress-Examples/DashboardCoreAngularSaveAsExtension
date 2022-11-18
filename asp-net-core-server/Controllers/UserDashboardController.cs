@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace ASPNETCoreDashboardAngular2.Controllers {
+namespace ASPNETCoreDashboardAngular {
     [ApiController]
     [Route("[controller]")]
     public class UserDashboardController : ControllerBase {
@@ -13,6 +13,6 @@ namespace ASPNETCoreDashboardAngular2.Controllers {
     }
 
     public class DahhboardInfo {
-        public string DashboardID { get; set; }
+        public string? DashboardID { get; set; }
     }
 }
