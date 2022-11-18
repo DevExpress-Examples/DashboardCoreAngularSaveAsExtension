@@ -17,13 +17,13 @@ The image below shows the result of the extensions implementation.
 
 ## Files to Review
 
-- [Startup.cs](Startup.cs)
-- [CustomDashboardFileStorage.cs](CustomDashboardFileStorage.cs)
-- [UserDashboardController.cs](Controllers/UserDashboardController.cs)
-- [extensions](ClientApp/src/app/home/extensions)
-- [input-popup.component.html](ClientApp/src/app/home/input-popup.component.html)
-- [delete-dashboard.service.ts](ClientApp/src/app/delete-dashboard.service.ts)
-- [home.component.ts](ClientApp/src/app/home/home.component.ts)
+- [Program.cs](asp-net-core-server/Program.cs)
+- [CustomDashboardFileStorage.cs](asp-net-core-server/CustomDashboardFileStorage.cs)
+- [UserDashboardController.cs](asp-net-core-server/Controllers/UserDashboardController.cs)
+- [extensions](dashboard-angular-app/src/app/extensions)
+- [input-popup.component.html](dashboard-angular-app/src/app/input-popup.component.html)
+- [delete-dashboard.service.ts](dashboard-angular-app/src/app/delete-dashboard.service.ts)
+- [app.component.ts](dashboard-angular-app/src/app/app.component.ts)
 
 ## Documentation
 
