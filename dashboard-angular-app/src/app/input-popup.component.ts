@@ -1,8 +1,12 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-
+import { DevExtremeModule } from 'devextreme-angular';
 @Component({
+  standalone: true,
   selector: 'input-popup',
   templateUrl: './input-popup.component.html',
+  imports: [
+    DevExtremeModule
+  ]
 })
 
 export class InputPopupComponent {

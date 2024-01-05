@@ -8,7 +8,6 @@ import { DeleteDashboardService } from '../delete-dashboard.service';
 
 export class DeleteDashboardExtension implements Dashboard.IExtension {
   public name: string;
-  private newName: string;
   private menuItem: Designer.DashboardMenuItem;
 
   constructor(private dashboardControl: Dashboard.DashboardControl, private userService: DeleteDashboardService) {
