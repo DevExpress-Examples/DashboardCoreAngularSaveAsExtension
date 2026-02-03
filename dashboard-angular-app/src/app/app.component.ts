@@ -1,7 +1,5 @@
 import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';import { HttpClientModule } from '@angular/common/http';
 import { DxDashboardControlModule, DxDashboardControlComponent } from 'devexpress-dashboard-angular';
 import { SaveAsDashboardExtension } from './extensions/save-as-dashboard-extension';
 import { DeleteDashboardExtension } from './extensions/delete-dashboard-extension';
@@ -10,11 +8,9 @@ import { DeleteDashboardService } from './delete-dashboard.service';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
   imports: [
   InputPopupComponent,
 	CommonModule, 
-	RouterOutlet, 
 	DxDashboardControlModule, 
 	HttpClientModule
   ],
